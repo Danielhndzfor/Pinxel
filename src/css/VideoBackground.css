@@ -295,10 +295,12 @@
 @media (max-width: 450px) {
     .video-background {
         height: 25vh;
+        width: 100vw;
     }
 
     .embed-responsive {
         height: 25vh;
+        width: 100vw;
     }
 
     .content {
