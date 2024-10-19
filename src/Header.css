@@ -134,3 +134,8 @@ header nav ul li a.active {
     }
 }
 
+@media (max-width: 450px) {
+    header .logo img {
+        height: 75px;
+    }
+}
