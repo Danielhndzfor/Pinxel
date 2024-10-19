@@ -82,7 +82,7 @@ header nav ul li a.active {
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .hamburger {
         width: 30px;
         height: 30px;
@@ -93,12 +93,12 @@ header nav ul li a.active {
     }
 
     header .logo img {
-        height: 100px;
+        height: 80px;
     }
 
     header nav ul {
         position: absolute;
-        top: 130px;
+        top: 90px;
         right: 0;
         background-color: #020202;
         flex-direction: column;
