@@ -134,7 +134,7 @@
     }
 
     .linea {
-        top: 2%;
+        top: 5%;
         height: 5px;
     }
 
@@ -144,7 +144,7 @@
     }
 
     .marcas-container {
-        padding: 35px;
+        padding: 25px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -152,7 +152,7 @@
     }
 
     .marca {
-        flex-basis: 45%; /* Cada marca ocupa el 45% del ancho del contenedor para tener 2 marcas por fila */
+        flex-basis: 25%; /* Cada marca ocupa el 45% del ancho del contenedor para tener 2 marcas por fila */
         margin: 10px; /* Añade un pequeño margen alrededor de cada marca */
         max-width: 140px; /* Limita el ancho máximo */
         max-height: 180px; /* Limita la altura máxima */
@@ -160,8 +160,19 @@
     }
 
     .marca img {
-        max-height: 100px;
+        max-height: 50px;
         width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
         object-fit: contain; /* Mantiene la proporción de la imagen */
+    }
+
+    .imgTC {
+        width: 15px !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .marca {
+        flex-basis: 10%; /* Cada marca ocupa el 100% del ancho del contenedor para tener 1 marca por fila */
     }
 }
