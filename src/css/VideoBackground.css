@@ -300,6 +300,7 @@
 
     .embed-responsive-item {
         height: 25vh;
+        width: 100vw;
     }
 
     .content {
