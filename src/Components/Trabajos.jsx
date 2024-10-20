@@ -34,6 +34,16 @@ const slides = [
 function Trabajos() {
     const swiperRef = useRef(null); // Creamos una referencia para Swiper
 
+    const handleCotizar = (e) => {
+        e.preventDefault();
+        const whatsappNumber = '523122283000'
+        const message = '¡Hola! Me gustaría solicitar información...'
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappLink, '_blank');
+
+    };
+
     return (
         <div className="trabajos">
             <h1 className="titulo2 antonioNav">ÚLTIMOS TRABAJOS</h1>
@@ -81,7 +91,7 @@ function Trabajos() {
             </button>
 
             <div className="fondobtn1">
-                <button className="antonioNav1" onClick={() => console.log('Cotizar Clicked!')}>
+                <button className="antonioNav1" onClick={handleCotizar}>
                     CONOCE MÁS
                 </button>
             </div>

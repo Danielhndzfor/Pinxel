@@ -6,6 +6,7 @@
     color: black;
 }
 
+/* Estilos generales para las redes sociales */
 .social-media {
     display: flex;
     justify-content: center;
@@ -18,7 +19,7 @@
 .social-media h3 {
     color: black;
     text-align: center;
-    text-transform: upercase;
+    text-transform: uppercase; /* Corregido "upercase" a "uppercase" */
     position: relative;
     z-index: 1;
     padding: 0 20px;
@@ -40,6 +41,7 @@
     align-items: center;
 }
 
+/* Estilos para los iconos */
 .icon {
     background-color: #000000;
     margin: 10px;
@@ -59,20 +61,65 @@
 
 /* Tamaños específicos para cada ícono */
 .facebook-icon img {
-    width: auto; /* Cambiar solo el tamaño del ícono de Facebook */
-    height: 30px; /* Mantén la proporción */
+    width: auto;
+    height: 30px; 
 }
 
 .instagram-icon img {
-    width: 30px; /* Tamaño específico para Instagram */
-    height: auto; /* Mantén la proporción */
+    width: 30px; 
+    height: auto; 
 }
 
 .whatsapp-icon img {
-    width: 30px; /* Tamaño específico para WhatsApp */
-    height: auto; /* Mantén la proporción */
+    width: 30px; 
+    height: auto; 
 }
 
 .iconColor {
     color: white;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+@media (max-width: 768px) {
+    .social-media {
+        margin-top: 30px;
+    }
+
+    .social-media h3 {
+        padding: 0 10px; /* Reducir el padding en pantallas más pequeñas */
+    }
+
+    .icon {
+        width: 45px; /* Ajustar el tamaño de los iconos */
+        height: 45px;
+    }
+
+    .icon img {
+        width: 25px; /* Ajustar el tamaño de las imágenes dentro de los iconos */
+        height: auto;
+    }
+
+    .linea1 {
+        top: 15px; /* Ajustar la posición de la línea */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media {
+        margin-top: 20px;
+    }
+
+    .social-media h3 {
+        font-size: 1.2rem; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .icon {
+        width: 40px; /* Más pequeño en pantallas muy pequeñas */
+        height: 40px;
+    }
+
+    .icon img {
+        width: 20px; /* Ajustar aún más el tamaño de las imágenes dentro de los iconos */
+        height: auto;
+    }
 }

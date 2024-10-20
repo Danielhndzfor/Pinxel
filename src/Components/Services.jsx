@@ -31,6 +31,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="line"></div>
+                    <div class="vertical"></div>
                     <div className="servicio">
                         <div className="titulo antonioNav">
                             <h3 className='titulo3'>DISEÑO</h3>
@@ -48,6 +49,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="line"></div>
+                    <div class="vertical"></div>
                     <div className="servicio">
                         <div className="titulo antonioNav">
                             <h3>INSTALACIÓN</h3>

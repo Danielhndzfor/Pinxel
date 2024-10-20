@@ -146,28 +146,145 @@
     margin-top: -21px;
 }
 
+.vertical {
+    display: none;
+    width: 100%;
+    background-color: #E00613;
+    height: 5px;
+    margin: 20px 50px;
 
-/* Para pantallas más pequeñas */
-@media (max-width: 768px) {
+}
+
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
     .servicios-container {
-        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
-        align-items: center; /* Centra los servicios en pantallas pequeñas */
+        padding: 0 50px;
     }
 
     .servicio {
-        width: 100%; /* Los servicios ocupan el 100% del ancho disponible */
-        flex-direction: column; /* Coloca los elementos en columna */
-        align-items: center;
-        text-align: center;
+        width: 100%; /* Ocupa todo el ancho en pantallas medianas */
+        flex-direction: column; /* Los elementos se apilan verticalmente */
     }
 
     .line {
+        height: 150px;
+    }
+
+    .titulo h3 {
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+
+    .lista ul li {
+        font-size: 30px;
+    }
+
+    .img {
+        width: 100px;
+        height: 100px; /* Ajusta el tamaño de la imagen */
+    }
+}
+
+@media (max-width: 768px) {
+    .title h2 {
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+
+    .servicios-container {
+        padding: 0 20px; /* Reduce el padding lateral */
+    }
+
+    .servicio {
         width: 100%;
-        height: 8px; /* Cambia la línea a horizontal */
-        margin: 20px 0;
+        flex-direction: column; /* Los elementos se apilan */
+    }
+
+    .titulo h3 {
+        font-size: 1.8em;
+    }
+
+    .lista ul li {
+        font-size: 28px;
+    }
+
+    .img {
+        width: 90px;
+        height: 90px; /* Ajusta el tamaño de la imagen */
+    }
+}
+
+@media (max-width: 480px) {
+    .title h2 {
+        font-size: 1.5em; /* Reduce más el tamaño del título */
+    }
+
+    .line {
+        display: none; /* Oculta la línea en pantallas pequeñas */
+    }
+
+    .vertical {
+        display: block; /* Muestra la línea vertical */
+    }
+
+    .servicios-container {
+        margin-top: 0;
+    }
+
+    .servicio {
+        width: 100%;
+        margin-bottom: -100px; /* Añade margen inferior para separar los servicios */
+        margin-top: 20px;
     }
 
     .titulo {
-        padding: 10px 0;
+        padding: 20px 0 50px 30px; /* Reduce el padding lateral */
+    }
+
+    .titulo h3 {
+        font-size: 1.5em;
+    }
+
+    .lista ul li {
+        font-size: 25px;
+    }
+
+    .img {
+        width: 80px;
+        height: 80px; /* Ajusta el tamaño de la imagen */
+    }
+
+    .servicio .img {
+        top: -200px;
+        right: -200px;
+        width: 80px;
+        height: 80px; /* Ajusta el tamaño de la imagen */
+    }
+
+    .design img {
+        width: auto;
+        height: 70%;
+        margin-left: -30px;
+    }
+
+    .servicio .design {
+        right: -180px !important;
+        top: -220px;
+    }
+
+    .impresion img {
+        width: auto;
+        height: 100%;
+        margin-left: -20px;
+        margin-top: -21px;
+    }
+
+    .servicio .instalacion {
+        right: -200px !important;
+        top: -220px;
+    }
+
+    .instalacion img {
+        width: auto;
+        height: 100%;
     }
 }

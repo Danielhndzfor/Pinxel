@@ -129,7 +129,7 @@
 
 @media (max-width: 450px) {
     .marcas h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0 5px;
     }
 
@@ -144,7 +144,7 @@
     }
 
     .marcas-container {
-        padding: 25px;
+        padding: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

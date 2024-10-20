@@ -145,14 +145,65 @@
     color: black;
 }
 
-/* Estilo para pantallas pequeñas */
-@media (max-width: 768px) {
+/* Ajustes generales para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .titulo2 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+        padding: 10px 20px;
+    }
+
+    .trabajos h2 {
+        font-size: 1.8rem; /* Reduce el tamaño de los subtítulos */
+    }
+
+    .swiper {
+        height: 350px; /* Ajuste de altura para pantallas más pequeñas */
+    }
+
     .custom-button-prev, .custom-button-next {
-        width: 70px;
-        height: 70px;
+        font-size: 50px; /* Tamaño de los botones de navegación */
+        width: 40px;
+        height: 60px;
+    }
+
+    .fondobtn1 button {
+        font-size: 1.8rem; /* Ajusta el tamaño del botón en pantallas pequeñas */
+        padding: 4px 15px; /* Reduce el padding */
+    }
+
+    .carrousel {
+        margin: 20px 50px; /* Reduce el margen para pantallas pequeñas */
+        height: 40vh; /* Ajusta la altura del contenedor del carrousel */
+    }
+}
+
+/* Ajustes adicionales para pantallas extra pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+    .swiper {
+        height: 250px; /* Menor altura para pantallas muy pequeñas */
+    }
+
+    .slide-image {
+        object-fit: cover; /* Ajusta la imagen para que se ajuste al contenedor */
+        box-shadow: none;
+        background-color: transparent; 
+        width: 300px;
     }
     
-    .custom-button-prev::after, .custom-button-next::after {
-        font-size: 35px;
+
+    .custom-button-prev, .custom-button-next {
+        font-size: 40px; /* Botones más pequeños */
+        width: 30px;
+        height: 50px;
+    }
+
+    .fondobtn1 button {
+        font-size: 1.5rem; /* Botón más pequeño */
+        padding: 3px 10px;
+    }
+
+    .carrousel {
+        margin: 10px 10px; /* Reduce aún más los márgenes */
+        height: 35vh;
     }
 }

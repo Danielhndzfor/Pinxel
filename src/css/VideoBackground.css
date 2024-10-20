@@ -294,12 +294,12 @@
 /* Adaptación para pantallas muy pequeñas */
 @media (max-width: 450px) {
     .video-background {
-        height: 25vh;
+        height: 20vh;
         width: 100vw;
     }
 
     .embed-responsive-item {
-        height: 25vh;
+        height: 20vh;
         width: 100vw;
     }
 
