@@ -90,15 +90,23 @@
     .marcas-container {
         gap: 20px;
         padding: 20px;
+        display: flex; /* Asegura que las marcas se alineen en filas */
+        flex-wrap: wrap; /* Permite que las marcas hagan wrap en pantallas más pequeñas */
+        justify-content: center; /* Centra las marcas */
     }
 
     .marca {
         max-width: 180px;
         max-height: 220px;
+        flex-basis: 25%; /* Cambiar para que ocupen el 45% del ancho del contenedor (2 por fila) */
+        margin: 10px;
+        box-sizing: border-box; /* Asegura que padding y border no afecten el ancho total */
     }
 
     .marca img {
         max-height: 130px;
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
+        object-fit: contain; /* Mantiene la proporción de la imagen */
     }
 }
 
@@ -120,6 +128,7 @@
     .marca {
         max-width: 160px;
         max-height: 200px;
+        flex-basis: 22%; /* Mantiene 2 marcas por fila */
     }
 
     .marca img {
@@ -145,18 +154,14 @@
 
     .marcas-container {
         padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 10px; /* Asegura que haya un espacio uniforme entre las marcas */
     }
 
     .marca {
-        flex-basis: 25%; /* Cada marca ocupa el 45% del ancho del contenedor para tener 2 marcas por fila */
+        flex-basis: 25%; /* Mantiene 2 marcas por fila */
         margin: 10px; /* Añade un pequeño margen alrededor de cada marca */
         max-width: 140px; /* Limita el ancho máximo */
         max-height: 180px; /* Limita la altura máxima */
-        box-sizing: border-box; /* Asegura que padding y border no afecten el ancho total */
     }
 
     .marca img {
@@ -173,6 +178,8 @@
 
 @media (max-width: 350px) {
     .marca {
-        flex-basis: 10%; /* Cada marca ocupa el 100% del ancho del contenedor para tener 1 marca por fila */
+        flex-basis: 100%; /* Cada marca ocupa el 100% del ancho del contenedor para tener 1 marca por fila */
+        max-width: 100%; /* Asegura que la marca no exceda el ancho del contenedor */
     }
 }
+

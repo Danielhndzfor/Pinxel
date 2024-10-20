@@ -122,4 +122,9 @@
         width: 20px; /* Ajustar aún más el tamaño de las imágenes dentro de los iconos */
         height: auto;
     }
+
+    .icon .F {
+        width: 12px;
+        height: auto;
+    }
 }

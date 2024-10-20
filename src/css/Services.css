@@ -22,7 +22,8 @@
 .title {
     margin: 0 auto;
     background-color: #E00613;
-    width: fit-content; /* Ajustar automáticamente según el contenido */
+    width: fit-content;
+    /* Ajustar automáticamente según el contenido */
     padding: 10px 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -36,18 +37,22 @@
 
 .servicios-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se muevan hacia abajo cuando no hay espacio */
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan hacia abajo cuando no hay espacio */
     justify-content: space-evenly;
     margin-top: 80px;
-    padding: 0 100px; /* Añade padding a los lados para evitar que los elementos se peguen a los bordes */
+    padding: 0 100px;
+    /* Añade padding a los lados para evitar que los elementos se peguen a los bordes */
 }
 
 .servicio {
     display: flex;
-    flex-direction: row; /* Mantén los elementos en fila en pantallas grandes */
+    flex-direction: row;
+    /* Mantén los elementos en fila en pantallas grandes */
     align-items: flex-start;
     justify-content: space-between;
-    width: 500px; /* Ajusta el ancho para permitir dos servicios por fila */
+    width: 500px;
+    /* Ajusta el ancho para permitir dos servicios por fila */
     border-radius: 10px;
 }
 
@@ -58,8 +63,17 @@
     margin: 20px 20px;
 }
 
+.line0 {
+    display: none;
+    width: 8px;
+    background-color: #E00613;
+    height: 200px;
+    margin: 20px 20px;
+}
+
 .titulo {
-    padding: 20px 0 50px 60px; /* Mantén el padding superior e inferior y añade padding a la izquierda para separar del borde */
+    padding: 20px 0 50px 60px;
+    /* Mantén el padding superior e inferior y añade padding a la izquierda para separar del borde */
 }
 
 
@@ -70,7 +84,8 @@
 }
 
 .titulo .resaltado {
-    background-color: #E00613; /* Fondo rojo */
+    background-color: #E00613;
+    /* Fondo rojo */
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -80,21 +95,27 @@
 }
 
 .lista {
-    width: 100%; /* Asegúrate de que la lista ocupe todo el ancho disponible */
+    width: 100%;
+    /* Asegúrate de que la lista ocupe todo el ancho disponible */
 }
 
 .lista ul {
     list-style-type: disc;
-    padding-left: 30px; /* Ajusta si es necesario */
-    margin: 0; /* Elimina el margen para ocupar todo el ancho */
-    width: 100%; /* Asegura que el ul ocupe el 100% */
+    padding-left: 30px;
+    /* Ajusta si es necesario */
+    margin: 0;
+    /* Elimina el margen para ocupar todo el ancho */
+    width: 100%;
+    /* Asegura que el ul ocupe el 100% */
 }
 
 .lista ul li {
     font-size: 35px;
     letter-spacing: 1px;
-    margin-bottom: -10px; /* Ajusta o elimina si es necesario */
-    white-space: nowrap; /* Evita que los elementos de la lista se dividan en varias líneas */
+    margin-bottom: -10px;
+    /* Ajusta o elimina si es necesario */
+    white-space: nowrap;
+    /* Evita que los elementos de la lista se dividan en varias líneas */
 }
 
 
@@ -112,13 +133,14 @@
     height: 120px;
     border-radius: 100px;
     background-color: #fff;
-    margin-right: 5px; /* Reduce el margen para acercar la imagen al texto */
-    object-fit: contain; /* Ajusta la imagen al contenedor */
+    margin-right: 5px;
+    /* Reduce el margen para acercar la imagen al texto */
+    object-fit: contain;
+    /* Ajusta la imagen al contenedor */
 }
 
 .design img {
     position: absolute;
-
     width: auto;
     height: 70%;
     margin-left: -30px;
@@ -157,87 +179,181 @@
 
 
 /* Media Queries para pantallas más pequeñas */
+@media (max-width: 1240px) {
+    .line0 {
+        display: block;
+    }
+}
+
 @media (max-width: 1024px) {
-    .servicios-container {
-        padding: 0 50px;
+    .title h2 {
+        font-size: 3em;
+        /* Reduce más el tamaño del título */
     }
 
-    .servicio {
-        width: 100%; /* Ocupa todo el ancho en pantallas medianas */
-        flex-direction: column; /* Los elementos se apilan verticalmente */
+    .line0 {
+        display: block;
+        /* Oculta la línea en pantallas pequeñas */
+    }
+
+    
+}
+
+@media (max-width: 800px) {
+    .titulo {
+        padding: 0;
+        /* Mantén el padding superior e inferior y añade padding a la izquierda para separar del borde */
+    }
+    .line0 {
+        display: block;
+        width: 5px;
+        /* Oculta la línea en pantallas pequeñas */
     }
 
     .line {
+        width: 5px;
+        height: 200px;
+        margin: 20px 20px;
+    }
+
+    .servicio .img {
+        position: relative;
+        right: 80px;
+        top: 0;
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        background-color: #fff;
+        margin-right: -50px;
+        /* Reduce el margen para acercar la imagen al texto */
+        object-fit: contain;
+        /* Ajusta la imagen al contenedor */
+    }
+
+    .servicio {
+        width: 410px;
+        margin-bottom: 70px;
+    }
+
+    .servicio .instalacion {
+        right: 100px !important;
+        top: -5px;
+    }
+}
+
+@media (max-width: 650px) {
+    .title h2 {
+        font-size: 2.2em;
+        /* Reduce más el tamaño del título */
+    }
+
+    .titulo h3 {
+        font-size: 1.7em;
+    }
+
+    .lista ul li {
+        font-size: 25px;
+    }
+
+    .line0 {
+        display: block;
+        /* Oculta la línea en pantallas pequeñas */
+        width: 5px;
+        
+    }
+
+    .line {
+        width: 5px;
+        height: 200px;
+        margin: 20px 20px;
+    }
+
+    .servicio .img {
+        position: relative;
+        right: 80px;
+        top: -20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: #fff;
+        margin-right: -70px;
+        /* Reduce el margen para acercar la imagen al texto */
+        object-fit: contain;
+        /* Ajusta la imagen al contenedor */
+    }
+
+    .servicio {
+        width: 300px;
+        margin-bottom: 120px;
+    }
+
+    .servicio .instalacion {
+        right: 100px !important;
+        top: -20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .title h2 {
+        font-size: 2.2em;
+        /* Reduce más el tamaño del título */
+    }
+
+    .titulo h3 {
+        font-size: 1.6em;
+    }
+
+    .lista ul li {
+        font-size: 22px;
+    }
+
+    .line0 {
+        display: block;
+        /* Oculta la línea en pantallas pequeñas */
+        width: 5px;
         height: 150px;
     }
 
-    .titulo h3 {
-        font-size: 2em; /* Reduce el tamaño del título */
-    }
-
-    .lista ul li {
-        font-size: 30px;
-    }
-
-    .img {
-        width: 100px;
-        height: 100px; /* Ajusta el tamaño de la imagen */
-    }
-}
-
-@media (max-width: 768px) {
-    .title h2 {
-        font-size: 2em; /* Reduce el tamaño del título */
-    }
-
-    .servicios-container {
-        padding: 0 20px; /* Reduce el padding lateral */
-    }
-
-    .servicio {
-        width: 100%;
-        flex-direction: column; /* Los elementos se apilan */
-    }
-
-    .titulo h3 {
-        font-size: 1.8em;
-    }
-
-    .lista ul li {
-        font-size: 28px;
-    }
-
-    .img {
-        width: 90px;
-        height: 90px; /* Ajusta el tamaño de la imagen */
-    }
-}
-
-@media (max-width: 480px) {
-    .title h2 {
-        font-size: 1.5em; /* Reduce más el tamaño del título */
-    }
-
     .line {
-        display: none; /* Oculta la línea en pantallas pequeñas */
-    }
-
-    .vertical {
-        display: block; /* Muestra la línea vertical */
+        width: 5px;
+        height: 150px;
+        margin: 20px 20px;
     }
 
     .servicios-container {
-        margin-top: 0;
+        padding: 0 50px;
+        /* Añade padding a los lados para evitar que los elementos se peguen a los bordes */
+    }
+
+    .servicio .img {
+        position: relative;
+        right: 80px;
+        top: -20px;
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+        background-color: #fff;
+        margin-right: -70px;
+        /* Reduce el margen para acercar la imagen al texto */
+        object-fit: contain;
+        /* Ajusta la imagen al contenedor */
     }
 
     .servicio {
-        width: 100%;
-        margin-bottom: -100px; /* Añade margen inferior para separar los servicios */
-        margin-top: 20px;
+        width: 300px;
+        margin-bottom: 120px;
     }
 
-    .titulo {
-        padding: 20px 0 50px 30px; /* Reduce el padding lateral */
+    .servicio .instalacion {
+        right: 100px !important;
+        top: -20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .title h2 {
+        font-size: 2em;
+        /* Reduce más el tamaño del título */
     }
 
     .titulo h3 {
@@ -245,46 +361,146 @@
     }
 
     .lista ul li {
-        font-size: 25px;
+        font-size: 20px;
     }
 
-    .img {
-        width: 80px;
-        height: 80px; /* Ajusta el tamaño de la imagen */
+    .line0 {
+        display: block;
+        /* Oculta la línea en pantallas pequeñas */
+        width: 5px;
+        height: 150px;
+        margin: 0;
+    }
+
+    .line {
+        width: 5px;
+        height: 150px;
+        margin: 20px 20px;
+        margin: 0;
+    }
+
+    .servicios-container {
+        padding: 0 40px;
+        /* Añade padding a los lados para evitar que los elementos se peguen a los bordes */
     }
 
     .servicio .img {
-        top: -200px;
-        right: -200px;
-        width: 80px;
-        height: 80px; /* Ajusta el tamaño de la imagen */
+        position: relative;
+        right: 110px;
+        top: -20px;
+        width: 85px;
+        height: 85px;
+        border-radius: 100px;
+        background-color: #fff;
+        margin-right: -70px;
+        /* Reduce el margen para acercar la imagen al texto */
+        object-fit: contain;
+        /* Ajusta la imagen al contenedor */
     }
 
-    .design img {
-        width: auto;
-        height: 70%;
-        margin-left: -30px;
-    }
-
-    .servicio .design {
-        right: -180px !important;
-        top: -220px;
-    }
-
-    .impresion img {
-        width: auto;
-        height: 100%;
-        margin-left: -20px;
-        margin-top: -21px;
+    .servicio {
+        width: 300px;
+        margin-bottom: 120px;
     }
 
     .servicio .instalacion {
-        right: -200px !important;
-        top: -220px;
+        right: 120px !important;
+        top: -20px;
+    }
+
+    .servicio .design {
+        right: 150px !important;
+        top: -20px;
+    }
+}
+
+@media (max-width: 388px) {
+    .title h2 {
+        font-size: 1.7em;
+        /* Reduce más el tamaño del título */
+    }
+
+    .titulo h3 {
+        font-size: 1.5em;
+    }
+
+    .lista ul li {
+        font-size: 17px;
+    }
+
+    .line0 {
+        display: block;
+        /* Oculta la línea en pantallas pequeñas */
+        width: 2px;
+        height: 150px;
+        margin: 0;
+    }
+
+    .line {
+        width: 2px;
+        height: 150px;
+        margin: 20px 20px;
+        margin: 0;
+    }
+
+    .servicios-container {
+        padding: 0 40px;
+        /* Añade padding a los lados para evitar que los elementos se peguen a los bordes */
+    }
+
+    .servicio .img {
+        position: relative;
+        right: 120px;
+        top: -10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        background-color: #fff;
+        margin-right: -120px;
+        /* Reduce el margen para acercar la imagen al texto */
+        object-fit: contain;
+        /* Ajusta la imagen al contenedor */
+    }
+
+    .servicio {
+        width: 220px;
+        margin-bottom: 60px;
+    }
+
+    .servicio .impresion {
+        top: 0px;
+    }
+
+    .servicio .instalacion {
+        right: 120px !important;
+        top: 0;
+    }
+
+    .servicio .design {
+        right: 160px !important;
+        top: 0;
+    }
+
+    .impresion img {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        margin-left: -10px;
+        margin-top: -10px;
+    }
+
+    .design img {
+        position: absolute;
+        width: auto;
+        height: 70%;
+        margin-left: -15px;
+        margin-top: 5px;
     }
 
     .instalacion img {
         width: auto;
         height: 100%;
+        margin-left: 0;
+        margin-top: -10px;
     }
 }

@@ -5,7 +5,7 @@ import './Footer.css';
 export default function Footer() {
     return (
         <MDBFooter /* bgColor='light' */ className='text-center text-lg-start text-muted'>
-            
+
 
             <section className=''>
                 <MDBContainer className='text-center text-md-start mt-5 antonioText'>
@@ -32,45 +32,50 @@ export default function Footer() {
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>Menú</h6>
                             <p>
-                                <a href='#!' className='text-reset'>
+                                <a href='#inicio' className='text-reset'>
                                     Inicio
                                 </a>
                             </p>
                             <p>
-                                <a href='#!' className='text-reset'>
+                                <a href='#servicios' className='text-reset'>
                                     Servicios
                                 </a>
                             </p>
                             <p>
-                                <a href='#!' className='text-reset'>
+                                <a href='#trabajos' className='text-reset'>
                                     Nosotros
                                 </a>
                             </p>
                             <p>
-                                <a href='#!' className='text-reset'>
+                                <a href='#cotizar' className='text-reset'>
                                     Cotizar
                                 </a>
                             </p>
                         </MDBCol>
 
+
                         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>Contacto</h6>
                             <p>
                                 <MDBIcon icon="home" className="me-2" />
-                                Av de los Insurgentes 590, Camino Real, 28040 Colima, Col.
+                                <a href="https://maps.app.goo.gl/h2umx7HGXvY3TkZn7" className='text-reset'>
+                                    Av de los Insurgentes 590, Camino Real, 28040 Colima, Col.
+                                </a>
                             </p>
                             <p>
                                 <MDBIcon icon="envelope" className="me-3" />
-                                hola@pinxel.mx
+                                <a href="mailto:hola@pinxel.mx" className="text-reset">hola@pinxel.mx</a>
                             </p>
                             <p>
-                                <MDBIcon icon="phone" className="me-3" /> + 52 312 312 5766
+                                <MDBIcon icon="phone" className="me-3" />
+                                <a href="tel:+523123125766" className="text-reset">+ 52 312 312 5766</a>
                             </p>
                             <p>
-                                <MDBIcon fab icon="whatsapp" className="me-3 whats" /> + 52 312 228 3000
+                                <MDBIcon fab icon="whatsapp" className="me-3 whats" />
+                                <a href="https://wa.me/523122283000" className="text-reset">+ 52 312 228 3000</a>
                             </p>
-
                         </MDBCol>
+
 
                         <MDBCol md="4" lg="4" xl="4" className='mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>Ubicación</h6>

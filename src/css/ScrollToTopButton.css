@@ -1,23 +1,50 @@
 .scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.scroll-btn {
+  background-color: #E00613;
+  color: #fff;
+  border: none;
+  padding: 10px 15px; /* Aumenta el tamaño del botón */
+  font-size: 30px;
+  border-radius: 10%; /* Botón circular */
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .scroll-to-top {
+      bottom: 15px; /* Ajustar el margen inferior */
+      right: 15px;  /* Ajustar el margen derecho */
   }
-  
+
   .scroll-btn {
-    background-color: #E00613;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    font-size: 30px;
-    border-radius: 10%;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+      padding: 8px 12px; /* Disminuir el tamaño del botón */
+      font-size: 24px;   /* Reducir el tamaño del icono */
   }
-  
-  .scroll-btn:hover {
-    opacity: 1;
+}
+
+/* Ajustes para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+  .scroll-to-top {
+      bottom: 10px; /* Más cerca del borde inferior */
+      right: 10px;  /* Más cerca del borde derecho */
   }
+
+  .scroll-btn {
+      padding: 6px 10px; /* Botón más pequeño */
+      font-size: 20px;   /* Icono más pequeño */
+  }
+}
+
   

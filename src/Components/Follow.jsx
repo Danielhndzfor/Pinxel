@@ -15,7 +15,7 @@ function Follow() {
                         <img src={Whatsapp} alt="Whatsapp" className="colorIcon" />
                     </a>
                     <a href="https://www.facebook.com/" className="icon facebook-icon">
-                        <img src={Facebook} alt="Facebook" className="colorIcon" />
+                        <img src={Facebook} alt="Facebook" className="colorIcon F" />
                     </a>
                     <a href="https://www.instagram.com/" className="icon instagram-icon">
                         <img src={Instagram} alt="Instagram" className="colorIcon" />

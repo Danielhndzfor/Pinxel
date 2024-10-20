@@ -66,6 +66,7 @@ const Services = () => {
                             <img src={clasificacion} alt="Instalación y Fabricación" />
                         </div>
                     </div>
+                    <div className="line0"></div>
                 </div>
             </div>
         </>
